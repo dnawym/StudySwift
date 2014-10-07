@@ -8,17 +8,40 @@
 
 import UIKit
 
+func yourFunction(var a: Int, var b: Int) -> Int
+{
+    println("hello function \(a) \(b)")
+    a += 1
+    b += 1
+    return a + b
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
     //var array = [String]()
     var array = [Dictionary<String, String>]()
     
+    func myFunction(label a: Int, label1 b: Int) -> Int
+    {
+        println("hello function \(a) \(b)")
+        return a + b
+    }
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var printTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //myFunction(label:100, b:200)
+        var result = myFunction(label:100, label1:200)
+        println("result: \(result)")
+        
+        var a = 0, b = 0
+        a = 100
+        b = 200
+        yourFunction(a, b)
+        println("a = \(a), b = \(b)")
     }
 
     override func didReceiveMemoryWarning() {
