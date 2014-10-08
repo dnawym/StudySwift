@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  animal
+//  UIView
 //
-//  Created by chuwei on 10/7/14.
+//  Created by chuwei on 10/8/14.
 //  Copyright (c) 2014 yaming. All rights reserved.
 //
 
@@ -10,20 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var redView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var ani1:Animal = Animal(weight: 1, age: 2)
-        ani1.weight = 11.1
-        ani1.age = 1
-        var weight = ani1.eat(100, something2:50)
-        println("weight in ViewController: \(weight)")
+        redView.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        redView.frame = CGRectMake(0, 0, 150, 150)
         
-        var dog = Dog(weight: 3, age: 4)
-        dog.weight = 20
-        dog.eat(20, something2: 10)
-        
-        Dog.printx()
+        var f = CGRectMake(100, 100, 150, 150)
+        var greenView = UIView(frame: f)
+        greenView.backgroundColor = UIColor.greenColor()
+        self.view.addSubview(greenView)
     }
 
     override func didReceiveMemoryWarning() {
