@@ -14,6 +14,7 @@
 		78C0868219E4C4150071092D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78C0868019E4C4150071092D /* LaunchScreen.xib */; };
 		78C0868E19E4C4150071092D /* animalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C0868D19E4C4150071092D /* animalTests.swift */; };
 		78C0869819E4C4410071092D /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C0869719E4C4410071092D /* Animal.swift */; };
+		78DF5CA819E57AAE00FA4674 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DF5CA719E57AAE00FA4674 /* Dog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		78C0868C19E4C4150071092D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78C0868D19E4C4150071092D /* animalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animalTests.swift; sourceTree = "<group>"; };
 		78C0869719E4C4410071092D /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		78DF5CA719E57AAE00FA4674 /* Dog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				78C0868019E4C4150071092D /* LaunchScreen.xib */,
 				78C0867519E4C4150071092D /* Supporting Files */,
 				78C0869719E4C4410071092D /* Animal.swift */,
+				78DF5CA719E57AAE00FA4674 /* Dog.swift */,
 			);
 			path = animal;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			files = (
 				78C0867A19E4C4150071092D /* ViewController.swift in Sources */,
 				78C0867819E4C4150071092D /* AppDelegate.swift in Sources */,
+				78DF5CA819E57AAE00FA4674 /* Dog.swift in Sources */,
 				78C0869819E4C4410071092D /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +415,7 @@
 				78C0869319E4C4150071092D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78C0869419E4C4150071092D /* Build configuration list for PBXNativeTarget "animalTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				78C0869619E4C4150071092D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
