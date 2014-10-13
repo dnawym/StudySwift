@@ -13,6 +13,8 @@
 		78BA5D4619EB585500DD3328 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78BA5D4519EB585500DD3328 /* Images.xcassets */; };
 		78BA5D4919EB585500DD3328 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78BA5D4719EB585500DD3328 /* LaunchScreen.xib */; };
 		78BA5D5519EB585500DD3328 /* BullesEyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BA5D5419EB585500DD3328 /* BullesEyeTests.swift */; };
+		78BD3CC519EC17E300C6B113 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BD3CC419EC17E300C6B113 /* AboutViewController.swift */; };
+		78BD3D1919EC287500C6B113 /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = 78BD3D1819EC287500C6B113 /* BullsEye.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		78BA5D4E19EB585500DD3328 /* BullesEyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BullesEyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BA5D5319EB585500DD3328 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78BA5D5419EB585500DD3328 /* BullesEyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullesEyeTests.swift; sourceTree = "<group>"; };
+		78BD3CC419EC17E300C6B113 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		78BD3D1819EC287500C6B113 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +81,11 @@
 		78BA5D3B19EB585500DD3328 /* BullesEye */ = {
 			isa = PBXGroup;
 			children = (
+				78BD3D1819EC287500C6B113 /* BullsEye.html */,
 				78BA5D3E19EB585500DD3328 /* AppDelegate.swift */,
 				78BA5D4019EB585500DD3328 /* ViewController.swift */,
 				78BA5D4219EB585500DD3328 /* Main.storyboard */,
+				78BD3CC419EC17E300C6B113 /* AboutViewController.swift */,
 				78BA5D4519EB585500DD3328 /* Images.xcassets */,
 				78BA5D4719EB585500DD3328 /* LaunchScreen.xib */,
 				78BA5D3C19EB585500DD3328 /* Supporting Files */,
@@ -193,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78BA5D4419EB585500DD3328 /* Main.storyboard in Resources */,
+				78BD3D1919EC287500C6B113 /* BullsEye.html in Resources */,
 				78BA5D4919EB585500DD3328 /* LaunchScreen.xib in Resources */,
 				78BA5D4619EB585500DD3328 /* Images.xcassets in Resources */,
 			);
@@ -212,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78BD3CC519EC17E300C6B113 /* AboutViewController.swift in Sources */,
 				78BA5D4119EB585500DD3328 /* ViewController.swift in Sources */,
 				78BA5D3F19EB585500DD3328 /* AppDelegate.swift in Sources */,
 			);
@@ -337,6 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BullesEye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -347,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BullesEye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -405,6 +415,7 @@
 				78BA5D5A19EB585500DD3328 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78BA5D5B19EB585500DD3328 /* Build configuration list for PBXNativeTarget "BullesEyeTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +424,7 @@
 				78BA5D5D19EB585500DD3328 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
