@@ -90,6 +90,15 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: title,
             message: message,
             preferredStyle: .Alert)
+
+        //let alert = UIAlertController(title: "hi", message: "hello", preferredStyle: .Alert)
+        
+        //let alert = UIAlertView()
+        //alert.title = "Title"
+        //alert.message = "My message"
+        //alert.addButtonWithTitle("Ok")
+        //alert.show()
+        
         
         let action = UIAlertAction(title: "OK", style: .Default, handler: {
             action in
@@ -100,7 +109,7 @@ class ViewController: UIViewController {
         alert.addAction(action)
         
         presentViewController(alert, animated: true, completion: nil)
-        
+
         //startNewRound()
         //updateLabels()
     }
