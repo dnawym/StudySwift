@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78B9F4FC19EEA33D0098DE9E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B9F4FA19EEA33D0098DE9E /* Default-568h@2x.png */; };
+		78B9F4FD19EEA33D0098DE9E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B9F4FB19EEA33D0098DE9E /* Default@2x.png */; };
 		78BA5D3F19EB585500DD3328 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BA5D3E19EB585500DD3328 /* AppDelegate.swift */; };
 		78BA5D4119EB585500DD3328 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BA5D4019EB585500DD3328 /* ViewController.swift */; };
 		78BA5D4419EB585500DD3328 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BA5D4219EB585500DD3328 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		78B9F4FA19EEA33D0098DE9E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		78B9F4FB19EEA33D0098DE9E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		78BA5D3919EB585500DD3328 /* BullesEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullesEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BA5D3D19EB585500DD3328 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78BA5D3E19EB585500DD3328 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 		78BA5D3019EB585500DD3328 = {
 			isa = PBXGroup;
 			children = (
+				78B9F4FA19EEA33D0098DE9E /* Default-568h@2x.png */,
+				78B9F4FB19EEA33D0098DE9E /* Default@2x.png */,
 				78BA5D3B19EB585500DD3328 /* BullesEye */,
 				78BA5D5119EB585500DD3328 /* BullesEyeTests */,
 				78BA5D3A19EB585500DD3328 /* Products */,
@@ -198,9 +204,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78B9F4FD19EEA33D0098DE9E /* Default@2x.png in Resources */,
 				78BA5D4419EB585500DD3328 /* Main.storyboard in Resources */,
 				78BD3D1919EC287500C6B113 /* BullsEye.html in Resources */,
 				78BA5D4919EB585500DD3328 /* LaunchScreen.xib in Resources */,
+				78B9F4FC19EEA33D0098DE9E /* Default-568h@2x.png in Resources */,
 				78BA5D4619EB585500DD3328 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

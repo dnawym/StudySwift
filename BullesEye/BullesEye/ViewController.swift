@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class ViewController: UIViewController {
 
@@ -142,6 +143,13 @@ class ViewController: UIViewController {
     @IBAction func startOver() {
         startNewGame()
         updateLabels()
+        
+        let transition = CATransition()
+        transition.type = kCATransitionFade
+        transition.duration = 1
+        transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        
+        view.layer.addAnimation(transition, forKey: nil)
     }
 }
 
