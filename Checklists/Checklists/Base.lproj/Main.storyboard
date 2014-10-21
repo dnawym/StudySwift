@@ -14,19 +14,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="3YA-mC-JEC">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="3YA-mC-JEC">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3YA-mC-JEC" id="Ija-ye-XUc">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="☑️" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mir-tw-25I">
+                                            <rect key="frame" x="8" y="13" width="28" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apn-Wp-80I">
-                                            <rect key="frame" x="8" y="8" width="584" height="27"/>
+                                            <rect key="frame" x="43" y="10" width="490" height="27"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="t76-BK-bNs" kind="presentation" identifier="EditItem" trigger="accessoryAction" id="qwa-0j-54r"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -37,14 +46,14 @@
                     <navigationItem key="navigationItem" title="Checklists" id="zFe-jO-1Tg">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="15I-JK-DP2">
                             <connections>
-                                <segue destination="t76-BK-bNs" kind="presentation" id="Aar-cV-qoy"/>
+                                <segue destination="t76-BK-bNs" kind="presentation" identifier="AddItem" id="Aar-cV-qoy"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLd-Iz-7bZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1178" y="384"/>
+            <point key="canvasLocation" x="1178" y="378"/>
         </scene>
         <!--Add Item-->
         <scene sceneID="yNh-kI-ec5">
@@ -65,9 +74,10 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the item" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wVs-Me-L3p">
                                                     <rect key="frame" x="8" y="8" width="584" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <action selector="done" destination="ppe-JA-ZS5" eventType="editingDidEndOnExit" id="ADY-ud-FFV"/>
+                                                        <outlet property="delegate" destination="ppe-JA-ZS5" id="7Pd-lL-GfQ"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -87,13 +97,14 @@
                                 <action selector="cancel" destination="ppe-JA-ZS5" id="JO9-iz-KBp"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="yDU-8V-PVv">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="yDU-8V-PVv">
                             <connections>
                                 <action selector="done" destination="ppe-JA-ZS5" id="wLs-R1-Com"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneBarButton" destination="yDU-8V-PVv" id="A2f-zP-sP9"/>
                         <outlet property="textField" destination="wVs-Me-L3p" id="tPk-cd-AlF"/>
                     </connections>
                 </tableViewController>
@@ -138,4 +149,7 @@
             <point key="canvasLocation" x="1906" y="384"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Aar-cV-qoy"/>
+    </inferredMetricsTieBreakers>
 </document>
