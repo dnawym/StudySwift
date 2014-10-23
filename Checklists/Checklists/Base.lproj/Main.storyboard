@@ -53,7 +53,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLd-Iz-7bZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1178" y="378"/>
+            <point key="canvasLocation" x="1032" y="406"/>
         </scene>
         <!--Add Item-->
         <scene sceneID="yNh-kI-ec5">
@@ -112,6 +112,28 @@
             </objects>
             <point key="canvasLocation" x="2718" y="381"/>
         </scene>
+        <!--Checklists-->
+        <scene sceneID="0zx-tP-KXH">
+            <objects>
+                <tableViewController id="DTr-E3-MLU" userLabel="Checklists" customClass="AllListsViewController" customModule="Checklists" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Iu3-9r-nRF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="DTr-E3-MLU" id="JLR-b5-PlO"/>
+                            <outlet property="delegate" destination="DTr-E3-MLU" id="BoD-Kk-Euz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Checklists" id="DG8-cI-EJi"/>
+                    <connections>
+                        <segue destination="iJC-Bx-sXS" kind="show" identifier="ShowChecklist" id="qxe-gQ-zZy"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hzy-XC-fUT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="-323"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Z4c-aX-rCU">
             <objects>
@@ -123,7 +145,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="iJC-Bx-sXS" kind="relationship" relationship="rootViewController" id="kXc-IH-e5a"/>
+                        <segue destination="DTr-E3-MLU" kind="relationship" relationship="rootViewController" id="1e6-OW-41S"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tF6-gf-OLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
