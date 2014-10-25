@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7842A51119FBD47E0022CCFC /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7842A51019FBD47E0022CCFC /* DataModel.swift */; };
 		78BACDF419FB5AFA00D38528 /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BACDF319FB5AFA00D38528 /* ListDetailViewController.swift */; };
 		78BD126D19EFE8D7004FED62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BD126C19EFE8D7004FED62 /* AppDelegate.swift */; };
 		78BD126F19EFE8D7004FED62 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BD126E19EFE8D7004FED62 /* ChecklistViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7842A51019FBD47E0022CCFC /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		78BACDF319FB5AFA00D38528 /* ListDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
 		78BD126719EFE8D7004FED62 /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BD126B19EFE8D7004FED62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				78D02F9819F943BD004C7C00 /* Checklist.swift */,
 				78C0ABF119F39EFD00019E62 /* ChecklistItem.swift */,
 				78BD126E19EFE8D7004FED62 /* ChecklistViewController.swift */,
+				7842A51019FBD47E0022CCFC /* DataModel.swift */,
 				78D35DD919F7E94E007C2FA3 /* ItemDetailViewController.swift */,
 				78BACDF319FB5AFA00D38528 /* ListDetailViewController.swift */,
 				78BD127319EFE8D7004FED62 /* Images.xcassets */,
@@ -232,6 +235,7 @@
 				78C0ABF219F39EFD00019E62 /* ChecklistItem.swift in Sources */,
 				78D02F9919F943BD004C7C00 /* Checklist.swift in Sources */,
 				78D35DDA19F7E94E007C2FA3 /* ItemDetailViewController.swift in Sources */,
+				7842A51119FBD47E0022CCFC /* DataModel.swift in Sources */,
 				78D02F9719F93D7E004C7C00 /* AllListsViewController.swift in Sources */,
 				78BD126D19EFE8D7004FED62 /* AppDelegate.swift in Sources */,
 			);
