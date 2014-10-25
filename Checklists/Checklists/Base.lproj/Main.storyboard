@@ -92,10 +92,19 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Checklist" id="COE-1C-tUZ">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Axu-DU-fVn"/>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="dkS-7a-T5P"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Axu-DU-fVn">
+                            <connections>
+                                <action selector="cancel" destination="7FZ-vi-zSr" id="NDR-df-Cay"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="done" id="dkS-7a-T5P">
+                            <connections>
+                                <action selector="done" destination="7FZ-vi-zSr" id="tyr-9W-ZEM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneBarButton" destination="dkS-7a-T5P" id="Rdc-TZ-FXI"/>
                         <outlet property="textField" destination="5qX-Cl-vR3" id="T7L-b1-h70"/>
                     </connections>
                 </tableViewController>

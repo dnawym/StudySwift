@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AllListsViewController: UITableViewController {
+class AllListsViewController: UITableViewController, ListDetailViewControllerDelegate {
 
     var lists: [Checklist]
     
@@ -84,6 +84,59 @@ class AllListsViewController: UITableViewController {
             
             controller.checklist = sender as Checklist
         }
+        else if segue.identifier == "AddChecklist" {
+            let navigationController = segue.destinationViewController as UINavigationController
+            let controller = navigationController.topViewController as ListDetailViewController
+            
+            controller.delegate = self
+            controller.checklistToEdit = nil
+        }
     }
- 
+
+    func listDetailViewControllerDidCancel(controller: ListDetailViewController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func listDetailViewController(controller: ListDetailViewController, didFinishAddingChecklist checklist: Checklist) {
+        let newRowIndex = lists.count
+        lists.append(checklist)
+        
+        let indexPath = NSIndexPath(forRow: newRowIndex, inSection: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func listDetailViewController(controller: ListDetailViewController, didFinishEditingChecklist checklist: Checklist) {
+        if let index = find(lists, checklist) {
+            let indexPath = NSIndexPath(forRow: index, inSection: 0)
+            if let cell = tableView.cellForRowAtIndexPath(indexPath) {
+                cell.textLabel?.text = checklist.name
+            }
+        }
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        lists.removeAtIndex(indexPath.row)
+        
+        let indexPaths = [indexPath]
+        tableView.deleteRowsAtIndexPaths(indexPaths, withRowAnimation: .Automatic)
+    }
+    
+    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+        let navigationController = storyboard!.instantiateViewControllerWithIdentifier("ListNavigationController") as UINavigationController
+        
+        let controller = navigationController.topViewController as ListDetailViewController
+        
+        controller.delegate = self
+        
+        let checklist = lists[indexPath.row]
+        
+        controller.checklistToEdit = checklist
+        
+        presentViewController(navigationController, animated: true, completion: nil)
+    }
 }
