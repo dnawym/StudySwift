@@ -20,18 +20,23 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="☑️" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mir-tw-25I">
-                                            <rect key="frame" x="8" y="13" width="28" height="21"/>
+                                            <rect key="frame" x="0.0" y="8" width="25" height="27"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apn-Wp-80I">
-                                            <rect key="frame" x="43" y="10" width="490" height="27"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apn-Wp-80I">
+                                            <rect key="frame" x="40" y="11" width="493" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Apn-Wp-80I" secondAttribute="trailing" id="C2I-IR-RtM"/>
+                                        <constraint firstAttribute="centerY" secondItem="Apn-Wp-80I" secondAttribute="centerY" id="FQJ-a1-cDr"/>
+                                        <constraint firstItem="Apn-Wp-80I" firstAttribute="leading" secondItem="Ija-ye-XUc" secondAttribute="leading" constant="40" id="sBC-nF-drV"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="t76-BK-bNs" kind="presentation" identifier="EditItem" trigger="accessoryAction" id="qwa-0j-54r"/>
@@ -71,8 +76,11 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L8D-fC-GgU" id="jmx-YR-zgo">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the List" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5qX-Cl-vR3">
-                                                    <rect key="frame" x="8" y="8" width="584" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the List" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5qX-Cl-vR3">
+                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Chx-Y6-afs"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
@@ -81,6 +89,11 @@
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5qX-Cl-vR3" firstAttribute="leading" secondItem="jmx-YR-zgo" secondAttribute="leading" constant="8" id="iNa-3K-O9N"/>
+                                                <constraint firstAttribute="trailing" secondItem="5qX-Cl-vR3" secondAttribute="trailing" constant="8" id="kLH-qb-anR"/>
+                                                <constraint firstItem="5qX-Cl-vR3" firstAttribute="top" secondItem="jmx-YR-zgo" secondAttribute="top" constant="7" id="qNV-Lc-iPQ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -177,8 +190,11 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BC5-v3-6tI" id="eaC-Wn-hYr">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the item" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wVs-Me-L3p">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the item" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wVs-Me-L3p">
                                                     <rect key="frame" x="8" y="8" width="584" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="GyY-xz-V2Q"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
@@ -187,6 +203,11 @@
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="wVs-Me-L3p" secondAttribute="trailing" constant="8" id="GDh-GI-yF4"/>
+                                                <constraint firstItem="wVs-Me-L3p" firstAttribute="leading" secondItem="eaC-Wn-hYr" secondAttribute="leading" constant="8" id="MYm-FK-J1C"/>
+                                                <constraint firstItem="wVs-Me-L3p" firstAttribute="top" secondItem="eaC-Wn-hYr" secondAttribute="top" constant="8" id="wn5-TE-U2n"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -321,4 +342,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="Aar-cV-qoy"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.015686274509803921" green="0.66274509803921566" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
 </document>

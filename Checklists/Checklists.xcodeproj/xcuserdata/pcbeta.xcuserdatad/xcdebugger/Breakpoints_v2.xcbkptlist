@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Checklists/AppDelegate.swift"
-            timestampString = "435934779.701512"
+            timestampString = "436030141.926071"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "applicationDidBecomeActive(_:)"
             landmarkType = "5">
          </BreakpointContent>
