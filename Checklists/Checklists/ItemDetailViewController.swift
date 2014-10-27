@@ -51,6 +51,7 @@ class ItemDetailViewController: UITableViewController, UITextViewDelegate {
             item.text = textField.text
             item.shouldRemind = shouldRemingSwitch.on
             item.dueDate = dueDate
+            item.scheduleNotification()
             delegate?.itemDetailViewController(self, didFinishEditingItem: item)
         } else {
             let item = ChecklistItem()
@@ -58,6 +59,7 @@ class ItemDetailViewController: UITableViewController, UITextViewDelegate {
             item.checked = false
             item.shouldRemind = shouldRemingSwitch.on
             item.dueDate = dueDate
+            item.scheduleNotification()
             delegate?.itemDetailViewController(self, didFinishAddingItem: item)
         }
 
@@ -198,5 +200,14 @@ class ItemDetailViewController: UITableViewController, UITextViewDelegate {
     
     func textFieldDidBeginEditing(textField: UITextField!) {
         hideDatePicker()
+    }
+    
+    @IBAction func shouldRemindToggled(switchControl: UISwitch) {
+        textField.resignFirstResponder()
+        
+        if switchControl.on {
+            let notificationSettings = UIUserNotificationSettings(forTypes: .Alert | .Sound, categories: nil)
+            UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+        }
     }
 }
