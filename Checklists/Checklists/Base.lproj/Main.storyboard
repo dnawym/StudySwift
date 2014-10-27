@@ -31,6 +31,12 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WU4-oZ-MEm">
+                                            <rect key="frame" x="40" y="23" width="493" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="Apn-Wp-80I" secondAttribute="trailing" id="C2I-IR-RtM"/>
@@ -58,7 +64,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLd-Iz-7bZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1836" y="-160"/>
+            <point key="canvasLocation" x="1836" y="-161"/>
         </scene>
         <!--Add Checklist-->
         <scene sceneID="cN8-3G-KaL">

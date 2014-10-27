@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Checklists/ChecklistViewController.swift"
-            timestampString = "436105318.699154"
+            timestampString = "436118454.388282"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
             landmarkName = "ChecklistViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -260,6 +260,22 @@
             startingLineNumber = "132"
             endingLineNumber = "132"
             landmarkName = "tableView(_:accessoryButtonTappedForRowWithIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Checklists/ChecklistViewController.swift"
+            timestampString = "436118503.709228"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "configureTextForCell(_:withChecklistItem:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
