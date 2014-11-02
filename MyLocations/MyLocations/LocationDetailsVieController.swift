@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+//import Dispatch
 
 private let dateFormatter: NSDateFormatter = {
     let formatter = NSDateFormatter()
@@ -31,8 +32,19 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
     var placemark: CLPlacemark?
     
     @IBAction func done() {
-        println("Description '\(descriptionText)'")
-        dismissViewControllerAnimated(true, completion: nil)
+        //println("Description '\(descriptionText)'")
+        //dismissViewControllerAnimated(true, completion: nil)
+        let hudView = HudView.hudInView(navigationController!.view, animated: true)
+        
+        hudView.text = "Tagged"
+        
+        /*let delayInSeconds = 0.6
+        let when = dispatch_time(DISPATCH_TIME_NOW, Int64(delayInSeconds * Double(NSEC_PER_SEC)))
+        dispatch_after(when, dispatch_get_main_queue(), {
+            self.dismissViewControllerAnimated(true, completion: nil)}
+        )*/
+        
+        afterDelay(0.6, {self.dismissViewControllerAnimated(true, completion: nil)})
     }
     
     @IBAction func cancel() {
@@ -56,6 +68,21 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
         }
         
         dateLabel.text = formatDate(NSDate())
+        
+        let gestureRecongnizer = UITapGestureRecognizer(target: self, action: Selector("hideKeyboard:"))
+        gestureRecongnizer.cancelsTouchesInView = false
+        tableView.addGestureRecognizer(gestureRecongnizer)
+    }
+    
+    func hideKeyboard(gestureRecongizer: UIGestureRecognizer) {
+        let point = gestureRecongizer.locationInView(tableView)
+        let indexPath = tableView.indexPathForRowAtPoint(point)
+        
+        if indexPath != nil && indexPath!.section == 0 && indexPath!.row == 0 {
+            return
+        }
+        
+        descriptionTextView.resignFirstResponder()
     }
 
     func stringFromPlacemark(placemark: CLPlacemark) -> String {
@@ -96,6 +123,25 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
         let controller = segue.sourceViewController as CategoryPickerViewController
         categoryName = controller.selectedCategoryName
         categoryLabel.text = categoryName
+    }
+    
+    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        if indexPath.section == 0 || indexPath.section == 1 {
+            return indexPath
+        } else {
+            return nil
+        }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 0 || indexPath.section == 1 {
+            descriptionTextView.becomeFirstResponder()
+        }
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        descriptionTextView.frame.size.width = view.frame.size.width - 30
     }
 }
 

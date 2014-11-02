@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		780155D31A048705008B96C9 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780155D21A048705008B96C9 /* HudView.swift */; };
+		782D91AF1A05D41800FBFEBD /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782D91AE1A05D41800FBFEBD /* Functions.swift */; };
 		783E6E851A0325D9001DB4E9 /* LocationDetailsVieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783E6E841A0325D9001DB4E9 /* LocationDetailsVieController.swift */; };
 		783E6E871A03BED2001DB4E9 /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783E6E861A03BED2001DB4E9 /* CategoryPickerViewController.swift */; };
 		78D916D619FFDD9B00C1B9DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D916D519FFDD9B00C1B9DA /* AppDelegate.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		780155D21A048705008B96C9 /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
+		782D91AE1A05D41800FBFEBD /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		783E6E841A0325D9001DB4E9 /* LocationDetailsVieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsVieController.swift; sourceTree = "<group>"; };
 		783E6E861A03BED2001DB4E9 /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		78D916D019FFDD9B00C1B9DA /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +90,8 @@
 				78D916D519FFDD9B00C1B9DA /* AppDelegate.swift */,
 				783E6E861A03BED2001DB4E9 /* CategoryPickerViewController.swift */,
 				78D916D719FFDD9B00C1B9DA /* CurrentLocationViewController.swift */,
+				782D91AE1A05D41800FBFEBD /* Functions.swift */,
+				780155D21A048705008B96C9 /* HudView.swift */,
 				783E6E841A0325D9001DB4E9 /* LocationDetailsVieController.swift */,
 				78D916D919FFDD9B00C1B9DA /* SecondViewController.swift */,
 				78D916DE19FFDD9C00C1B9DA /* Images.xcassets */,
@@ -223,6 +229,8 @@
 			files = (
 				783E6E851A0325D9001DB4E9 /* LocationDetailsVieController.swift in Sources */,
 				78D916DA19FFDD9B00C1B9DA /* SecondViewController.swift in Sources */,
+				780155D31A048705008B96C9 /* HudView.swift in Sources */,
+				782D91AF1A05D41800FBFEBD /* Functions.swift in Sources */,
 				78D916D619FFDD9B00C1B9DA /* AppDelegate.swift in Sources */,
 				783E6E871A03BED2001DB4E9 /* CategoryPickerViewController.swift in Sources */,
 				78D916D819FFDD9B00C1B9DA /* CurrentLocationViewController.swift in Sources */,
