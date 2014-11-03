@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 //import Dispatch
+import CoreData
 
 private let dateFormatter: NSDateFormatter = {
     let formatter = NSDateFormatter()
@@ -31,6 +32,9 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
     var coordinate = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     var placemark: CLPlacemark?
     
+    var managedObjectContext: NSManagedObjectContext!
+    var date = NSDate()
+    
     @IBAction func done() {
         //println("Description '\(descriptionText)'")
         //dismissViewControllerAnimated(true, completion: nil)
@@ -43,6 +47,20 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
         dispatch_after(when, dispatch_get_main_queue(), {
             self.dismissViewControllerAnimated(true, completion: nil)}
         )*/
+        let location = NSEntityDescription.insertNewObjectForEntityForName("Location", inManagedObjectContext: managedObjectContext) as Location
+        
+        location.locationDescription = descriptionText
+        location.category = categoryName
+        location.latitude = coordinate.latitude
+        location.longitude = coordinate.longitude
+        location.date = date
+        location.placemark = placemark
+        
+        var error: NSError?
+        if !managedObjectContext.save(&error) {
+            fatalCoreDataError(error)
+            return
+        }
         
         afterDelay(0.6, {self.dismissViewControllerAnimated(true, completion: nil)})
     }
@@ -67,7 +85,7 @@ class LocationDetailsViewController: UITableViewController, UITextViewDelegate {
             addressLabel.text = "No Address Found"
         }
         
-        dateLabel.text = formatDate(NSDate())
+        dateLabel.text = formatDate(date)
         
         let gestureRecongnizer = UITapGestureRecognizer(target: self, action: Selector("hideKeyboard:"))
         gestureRecongnizer.cancelsTouchesInView = false
