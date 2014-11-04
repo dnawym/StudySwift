@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyLocations/LocationDetailsVieController.swift"
-            timestampString = "436714162.465787"
+            timestampString = "436803042.826583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "categoryPickerDidPickCategory(_:)"
             landmarkType = "5">
          </BreakpointContent>

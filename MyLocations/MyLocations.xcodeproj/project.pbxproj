@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		780155D31A048705008B96C9 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780155D21A048705008B96C9 /* HudView.swift */; };
 		7824E5751A085D67004D4922 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7824E5741A085D67004D4922 /* LocationsViewController.swift */; };
+		7824E5771A090FDE004D4922 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7824E5761A090FDE004D4922 /* LocationCell.swift */; };
 		782D91AF1A05D41800FBFEBD /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782D91AE1A05D41800FBFEBD /* Functions.swift */; };
 		783E6E851A0325D9001DB4E9 /* LocationDetailsVieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783E6E841A0325D9001DB4E9 /* LocationDetailsVieController.swift */; };
 		783E6E871A03BED2001DB4E9 /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783E6E861A03BED2001DB4E9 /* CategoryPickerViewController.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		780155D21A048705008B96C9 /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		7824E5741A085D67004D4922 /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		7824E5761A090FDE004D4922 /* LocationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		782D91AE1A05D41800FBFEBD /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		783E6E841A0325D9001DB4E9 /* LocationDetailsVieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsVieController.swift; sourceTree = "<group>"; };
 		783E6E861A03BED2001DB4E9 /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				78D916E019FFDD9C00C1B9DA /* LaunchScreen.xib */,
 				78D916DB19FFDD9B00C1B9DA /* Main.storyboard */,
 				78D916D319FFDD9B00C1B9DA /* Supporting Files */,
+				7824E5761A090FDE004D4922 /* LocationCell.swift */,
 			);
 			path = MyLocations;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7824E5771A090FDE004D4922 /* LocationCell.swift in Sources */,
 				783E6E851A0325D9001DB4E9 /* LocationDetailsVieController.swift in Sources */,
 				7824E5751A085D67004D4922 /* LocationsViewController.swift in Sources */,
 				78D28A921A07A6450005B707 /* DataModel.xcdatamodeld in Sources */,

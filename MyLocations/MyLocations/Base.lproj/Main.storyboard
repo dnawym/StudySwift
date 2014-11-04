@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="406" y="-303"/>
+            <point key="canvasLocation" x="596" y="-311"/>
         </scene>
         <!--Tag Location-->
         <scene sceneID="cCN-te-eTr">
@@ -278,7 +278,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLM-wu-3xA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1194" y="-303"/>
+            <point key="canvasLocation" x="1696" y="0.0"/>
         </scene>
         <!--Category Picker View Controller-->
         <scene sceneID="Wi6-d6-5sD">
@@ -317,7 +317,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zb0-jV-SCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="nWc-bK-YsM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1596" y="-303"/>
+            <point key="canvasLocation" x="2138" y="0.0"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -336,7 +336,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-96" y="0.0"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qkZ-XE-DoK">
@@ -354,7 +354,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3IE-Qf-YUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="-303"/>
+            <point key="canvasLocation" x="1284" y="0.0"/>
         </scene>
         <!--Locations-->
         <scene sceneID="EPt-UY-Vi2">
@@ -365,7 +365,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="57" id="Tfb-eg-bKQ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationCell" rowHeight="57" id="Tfb-eg-bKQ" customClass="LocationCell" customModule="MyLocations" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tfb-eg-bKQ" id="WXd-Un-HLi">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -386,6 +386,11 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="iFb-rd-xam" id="QM2-nf-RH3"/>
+                                    <outlet property="descriptionLabel" destination="4z4-2O-cXZ" id="01V-oz-Xbg"/>
+                                    <segue destination="upP-Qm-I5m" kind="modal" identifier="EditLocation" id="ScZ-0B-M41"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -425,4 +430,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ScZ-0B-M41"/>
+    </inferredMetricsTieBreakers>
 </document>
