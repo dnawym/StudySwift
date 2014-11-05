@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MyLocations
 //
-//  Created by chuwei on 10/28/14.
+//  Created by yaming on 10/28/14.
 //  Copyright (c) 2014 yaming. All rights reserved.
 //
 
@@ -35,8 +35,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let navigationController = tabBarViewControllers[1] as UINavigationController
             let locationsViewController = navigationController.viewControllers[0] as LocationsViewController
             locationsViewController.managedObjectContext = managedObjectContext
+            
             // Workaround for Core Data crash on cached data.
             let forceTheViewToLoad = locationsViewController.view
+            
+            let mapViewController = tabBarViewControllers[2] as MapViewController
+            mapViewController.managedObjectContext = managedObjectContext
         }
         
         listenForFatalCoreDataNotifications()

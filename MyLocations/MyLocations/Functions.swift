@@ -2,7 +2,7 @@
 //  Functions.swift
 //  MyLocations
 //
-//  Created by chuwei on 11/1/14.
+//  Created by yaming on 11/1/14.
 //  Copyright (c) 2014 yaming. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  CategoryPickerViewController.swift
 //  MyLocations
 //
-//  Created by chuwei on 10/31/14.
+//  Created by yaming on 10/31/14.
 //  Copyright (c) 2014 yaming. All rights reserved.
 //
 

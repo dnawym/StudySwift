@@ -332,6 +332,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="EFW-wf-fRM" kind="relationship" relationship="viewControllers" id="5KR-31-Aqc"/>
+                        <segue destination="eGF-lB-9GV" kind="relationship" relationship="viewControllers" id="Rq5-lL-di3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -404,6 +405,55 @@
             </objects>
             <point key="canvasLocation" x="796" y="363"/>
         </scene>
+        <!--Map-->
+        <scene sceneID="nfm-PW-F3z">
+            <objects>
+                <viewController id="eGF-lB-9GV" customClass="MapViewController" customModule="MyLocations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fjt-hi-RQo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" id="EM7-el-IOO">
+                                <rect key="frame" x="0.0" y="-30" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="eGF-lB-9GV" id="pBe-4j-VFP"/>
+                                </connections>
+                            </mapView>
+                            <navigationBar contentMode="scaleToFill" id="RuL-XE-pve">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Map" id="tZf-2Y-ufx">
+                                        <barButtonItem key="leftBarButtonItem" title="Locations" id="a9P-fC-0Em">
+                                            <connections>
+                                                <action selector="showLocations" destination="eGF-lB-9GV" id="69k-jt-S7G"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="User" id="h4l-h3-Dua">
+                                            <connections>
+                                                <action selector="showUser" destination="eGF-lB-9GV" id="wtw-WJ-MsE"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="eGF-lB-9GV" id="ugN-6f-hgB"/>
+                                </connections>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" id="WKu-8e-RLs"/>
+                    <connections>
+                        <outlet property="mapView" destination="EM7-el-IOO" id="UR3-Gx-lzr"/>
+                        <segue destination="upP-Qm-I5m" kind="modal" identifier="EditLocation" id="sfz-GS-417"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibn-fi-Ck3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="1156"/>
+        </scene>
         <!--Locations-->
         <scene sceneID="Ztd-Gj-diA">
             <objects>
@@ -431,6 +481,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ScZ-0B-M41"/>
+        <segue reference="sfz-GS-417"/>
     </inferredMetricsTieBreakers>
 </document>
