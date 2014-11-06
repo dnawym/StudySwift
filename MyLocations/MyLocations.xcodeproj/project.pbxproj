@@ -15,6 +15,7 @@
 		783E6E871A03BED2001DB4E9 /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 783E6E861A03BED2001DB4E9 /* CategoryPickerViewController.swift */; };
 		78B949A31A0A5383001B4D4F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B949A21A0A5383001B4D4F /* MapKit.framework */; };
 		78B949A51A0A553B001B4D4F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B949A41A0A553B001B4D4F /* MapViewController.swift */; };
+		78BC64FB1A0BB430007182AC /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BC64FA1A0BB430007182AC /* UIImage+Resize.swift */; };
 		78D28A921A07A6450005B707 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78D28A901A07A6450005B707 /* DataModel.xcdatamodeld */; };
 		78D28A941A07AEA80005B707 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D28A931A07AEA80005B707 /* Location.swift */; };
 		78D916D619FFDD9B00C1B9DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D916D519FFDD9B00C1B9DA /* AppDelegate.swift */; };
@@ -45,6 +46,7 @@
 		783E6E861A03BED2001DB4E9 /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		78B949A21A0A5383001B4D4F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		78B949A41A0A553B001B4D4F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		78BC64FA1A0BB430007182AC /* UIImage+Resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		78D28A911A07A6450005B707 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		78D28A931A07AEA80005B707 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		78D916D019FFDD9B00C1B9DA /* MyLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 				7824E5741A085D67004D4922 /* LocationsViewController.swift */,
 				78B949A41A0A553B001B4D4F /* MapViewController.swift */,
 				78D916D919FFDD9B00C1B9DA /* SecondViewController.swift */,
+				78BC64FA1A0BB430007182AC /* UIImage+Resize.swift */,
 				78D916DE19FFDD9C00C1B9DA /* Images.xcassets */,
 				78D28A901A07A6450005B707 /* DataModel.xcdatamodeld */,
 				78D916E019FFDD9C00C1B9DA /* LaunchScreen.xib */,
@@ -251,6 +254,7 @@
 				7824E5751A085D67004D4922 /* LocationsViewController.swift in Sources */,
 				78D28A921A07A6450005B707 /* DataModel.xcdatamodeld in Sources */,
 				78D916DA19FFDD9B00C1B9DA /* SecondViewController.swift in Sources */,
+				78BC64FB1A0BB430007182AC /* UIImage+Resize.swift in Sources */,
 				780155D31A048705008B96C9 /* HudView.swift in Sources */,
 				782D91AF1A05D41800FBFEBD /* Functions.swift in Sources */,
 				78B949A51A0A553B001B4D4F /* MapViewController.swift in Sources */,
