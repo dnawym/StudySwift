@@ -124,6 +124,19 @@ class LocationDetailsViewController: UITableViewController {
         tableView.addGestureRecognizer(gestureRecognizer)
         
         listenForBackgroundNotification()
+        
+        tableView.backgroundColor = UIColor.blackColor()
+        tableView.separatorColor = UIColor(white: 1.0, alpha: 0.2)
+        tableView.indicatorStyle = .White
+        
+        descriptionTextView.textColor = UIColor.whiteColor()
+        descriptionTextView.backgroundColor = UIColor.blackColor()
+        
+        addPhotoLabel.textColor = UIColor.whiteColor()
+        addPhotoLabel.highlightedTextColor = addPhotoLabel.textColor
+        
+        addressLabel.textColor = UIColor(white: 1.0, alpha: 0.4)
+        addressLabel.highlightedTextColor = addressLabel.textColor
     }
     
     override func viewWillLayoutSubviews() {
@@ -143,11 +156,14 @@ class LocationDetailsViewController: UITableViewController {
     }
     
     func stringFromPlacemark(placemark: CLPlacemark) -> String {
-        return
-            "\(placemark.subThoroughfare) \(placemark.thoroughfare), " +
-                "\(placemark.locality), " +
-                "\(placemark.administrativeArea) \(placemark.postalCode)," +
-        "\(placemark.country)"
+        var line = ""
+        line.addText(placemark.subThoroughfare)
+        line.addText(placemark.thoroughfare, withSeparator: " ")
+        line.addText(placemark.locality, withSeparator: ", ")
+        line.addText(placemark.administrativeArea, withSeparator: ", ")
+        line.addText(placemark.postalCode, withSeparator: " ")
+        line.addText(placemark.country, withSeparator: ", ")
+        return line
     }
     
     func formatDate(date: NSDate) -> String {
@@ -188,6 +204,28 @@ class LocationDetailsViewController: UITableViewController {
             //choosePhotoFromLibrary() // use photo library when testing on simulator
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
             pickPhoto() // pop an alert
+        }
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.backgroundColor = UIColor.blackColor()
+        
+        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.textLabel?.highlightedTextColor = cell.textLabel?.textColor
+        
+        if let detailLabel = cell.detailTextLabel {
+            detailLabel.textColor = UIColor(white: 1.0, alpha: 0.4)
+            detailLabel.highlightedTextColor = detailLabel.textColor
+        }
+        
+        let selectionView = UIView(frame: CGRect.zeroRect)
+        selectionView.backgroundColor = UIColor(white: 1.0, alpha: 0.2)
+        cell.selectedBackgroundView = selectionView
+        
+        if indexPath.row == 2 {
+            let addressLabel = cell.viewWithTag(100) as UILabel
+            addressLabel.textColor = UIColor.whiteColor()
+            addressLabel.highlightedTextColor = addressLabel.textColor
         }
     }
     
@@ -246,7 +284,8 @@ extension LocationDetailsViewController: UITextViewDelegate {
 
 extension LocationDetailsViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func takePhotoWithCamera() {
-        let imagePicker = UIImagePickerController()
+        let imagePicker = MyImagePickerController()
+        imagePicker.view.tintColor = view.tintColor
         imagePicker.sourceType = .Camera
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
@@ -254,7 +293,8 @@ extension LocationDetailsViewController: UIImagePickerControllerDelegate, UINavi
     }
     
     func choosePhotoFromLibrary() {
-        let imagePicker = UIImagePickerController()
+        let imagePicker = MyImagePickerController()
+        imagePicker.view.tintColor = view.tintColor
         imagePicker.sourceType = .PhotoLibrary
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
