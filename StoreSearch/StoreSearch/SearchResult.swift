@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 yaming. All rights reserved.
 //
 
+import Foundation
+
 class SearchResult {
     var name = ""
     var artistName = ""
@@ -16,4 +18,8 @@ class SearchResult {
     var currency = ""
     var price = 0.0
     var genre = ""
+}
+
+func < (lhs: SearchResult, rhs: SearchResult) -> Bool {
+    return lhs.name.localizedCompare(rhs.name) == NSComparisonResult.OrderedAscending
 }

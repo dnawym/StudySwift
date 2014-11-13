@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		782184701A10F29100E1BC3B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7821846F1A10F29100E1BC3B /* SearchResult.swift */; };
 		782E0E2A1A110B430071BBDB /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 782E0E291A110B430071BBDB /* SearchResultCell.xib */; };
+		782FC7771A14D49100C1BBE3 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 782FC7761A14D49100C1BBE3 /* LoadingCell.xib */; };
 		785697951A0FB1DE007B80FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785697941A0FB1DE007B80FB /* AppDelegate.swift */; };
 		785697971A0FB1DE007B80FB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785697961A0FB1DE007B80FB /* SearchViewController.swift */; };
 		7856979A1A0FB1DE007B80FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785697981A0FB1DE007B80FB /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		7821846F1A10F29100E1BC3B /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		782E0E291A110B430071BBDB /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchResultCell.xib; path = ../SearchResultCell.xib; sourceTree = "<group>"; };
+		782FC7761A14D49100C1BBE3 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		7856978F1A0FB1DE007B80FB /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		785697931A0FB1DE007B80FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		785697941A0FB1DE007B80FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				785697961A0FB1DE007B80FB /* SearchViewController.swift */,
 				7856979B1A0FB1DE007B80FB /* Images.xcassets */,
 				782E0E291A110B430071BBDB /* SearchResultCell.xib */,
+				782FC7761A14D49100C1BBE3 /* LoadingCell.xib */,
 				7856979D1A0FB1DE007B80FB /* LaunchScreen.xib */,
 				785697981A0FB1DE007B80FB /* Main.storyboard */,
 				785697921A0FB1DE007B80FB /* Supporting Files */,
@@ -206,6 +209,7 @@
 			files = (
 				7856979A1A0FB1DE007B80FB /* Main.storyboard in Resources */,
 				7856979F1A0FB1DE007B80FB /* LaunchScreen.xib in Resources */,
+				782FC7771A14D49100C1BBE3 /* LoadingCell.xib in Resources */,
 				782E0E2A1A110B430071BBDB /* SearchResultCell.xib in Resources */,
 				78B5F67A1A124467008BBC22 /* NothingFoundCell.xib in Resources */,
 				7856979C1A0FB1DE007B80FB /* Images.xcassets in Resources */,
