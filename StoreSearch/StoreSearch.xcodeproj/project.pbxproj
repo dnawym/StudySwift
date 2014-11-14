@@ -10,11 +10,11 @@
 		782184701A10F29100E1BC3B /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7821846F1A10F29100E1BC3B /* SearchResult.swift */; };
 		782E0E2A1A110B430071BBDB /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 782E0E291A110B430071BBDB /* SearchResultCell.xib */; };
 		782FC7771A14D49100C1BBE3 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 782FC7761A14D49100C1BBE3 /* LoadingCell.xib */; };
+		7833EBF61A163CBB00BCAD96 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7833EBF51A163CBB00BCAD96 /* UIImageView+DownloadImage.swift */; };
 		785697951A0FB1DE007B80FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785697941A0FB1DE007B80FB /* AppDelegate.swift */; };
 		785697971A0FB1DE007B80FB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785697961A0FB1DE007B80FB /* SearchViewController.swift */; };
 		7856979A1A0FB1DE007B80FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785697981A0FB1DE007B80FB /* Main.storyboard */; };
 		7856979C1A0FB1DE007B80FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7856979B1A0FB1DE007B80FB /* Images.xcassets */; };
-		7856979F1A0FB1DE007B80FB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7856979D1A0FB1DE007B80FB /* LaunchScreen.xib */; };
 		785697AB1A0FB1DE007B80FB /* StoreSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785697AA1A0FB1DE007B80FB /* StoreSearchTests.swift */; };
 		78B5F6781A124211008BBC22 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5F6771A124211008BBC22 /* SearchResultCell.swift */; };
 		78B5F67A1A124467008BBC22 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78B5F6791A124467008BBC22 /* NothingFoundCell.xib */; };
@@ -34,13 +34,13 @@
 		7821846F1A10F29100E1BC3B /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		782E0E291A110B430071BBDB /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchResultCell.xib; path = ../SearchResultCell.xib; sourceTree = "<group>"; };
 		782FC7761A14D49100C1BBE3 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		7833EBF51A163CBB00BCAD96 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		7856978F1A0FB1DE007B80FB /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		785697931A0FB1DE007B80FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		785697941A0FB1DE007B80FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		785697961A0FB1DE007B80FB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		785697991A0FB1DE007B80FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7856979B1A0FB1DE007B80FB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		7856979E1A0FB1DE007B80FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		785697A41A0FB1DE007B80FB /* StoreSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoreSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		785697A91A0FB1DE007B80FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		785697AA1A0FB1DE007B80FB /* StoreSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSearchTests.swift; sourceTree = "<group>"; };
@@ -94,10 +94,10 @@
 				7856979B1A0FB1DE007B80FB /* Images.xcassets */,
 				782E0E291A110B430071BBDB /* SearchResultCell.xib */,
 				782FC7761A14D49100C1BBE3 /* LoadingCell.xib */,
-				7856979D1A0FB1DE007B80FB /* LaunchScreen.xib */,
 				785697981A0FB1DE007B80FB /* Main.storyboard */,
 				785697921A0FB1DE007B80FB /* Supporting Files */,
 				78B5F6791A124467008BBC22 /* NothingFoundCell.xib */,
+				7833EBF51A163CBB00BCAD96 /* UIImageView+DownloadImage.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -208,7 +208,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7856979A1A0FB1DE007B80FB /* Main.storyboard in Resources */,
-				7856979F1A0FB1DE007B80FB /* LaunchScreen.xib in Resources */,
 				782FC7771A14D49100C1BBE3 /* LoadingCell.xib in Resources */,
 				782E0E2A1A110B430071BBDB /* SearchResultCell.xib in Resources */,
 				78B5F67A1A124467008BBC22 /* NothingFoundCell.xib in Resources */,
@@ -234,6 +233,7 @@
 				782184701A10F29100E1BC3B /* SearchResult.swift in Sources */,
 				78B5F6781A124211008BBC22 /* SearchResultCell.swift in Sources */,
 				785697951A0FB1DE007B80FB /* AppDelegate.swift in Sources */,
+				7833EBF61A163CBB00BCAD96 /* UIImageView+DownloadImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,14 +262,6 @@
 				785697991A0FB1DE007B80FB /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7856979D1A0FB1DE007B80FB /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7856979E1A0FB1DE007B80FB /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
