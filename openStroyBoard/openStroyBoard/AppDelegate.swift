@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  StoreSearch
+//  openStroyBoard
 //
-//  Created by YaMing on 11/9/14.
+//  Created by YaMing on 11/16/14.
 //  Copyright (c) 2014 yaming. All rights reserved.
 //
 
@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        customizeAppearance()
         return true
     }
 
@@ -42,10 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    func customizeAppearance() {
-        let barTintColor = UIColor(red: 20/255, green: 160/255, blue: 160/255, alpha: 1)
-        UISearchBar.appearance().barTintColor = barTintColor
-        window!.tintColor = UIColor(red: 10/255, green: 80/255, blue: 80/255, alpha: 1)
-    }
+
 }
 
