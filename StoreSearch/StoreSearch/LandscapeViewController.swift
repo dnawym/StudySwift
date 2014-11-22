@@ -32,4 +32,7 @@ class LandscapeViewController: UIViewController {
     }
     */
 
+    deinit {
+        println("deinit \(self)")
+    }
 }

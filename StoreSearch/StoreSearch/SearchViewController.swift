@@ -19,6 +19,8 @@ class SearchViewController: UIViewController {
     var isLoading = false
     var dataTask: NSURLSessionDataTask?
     
+    var landscapeViewController: LandscapeViewController?
+    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBAction func segmentChanged(sender: UISegmentedControl) {
         performSearch()
@@ -30,11 +32,11 @@ class SearchViewController: UIViewController {
         tableView.contentInset = UIEdgeInsets(top: 108, left: 0, bottom: 0, right: 0)
         
         var cellNib = UINib(nibName: TableViewCellIdentifiers.searchResultCell, bundle: nil)
-        tableView.registerNib(cellNib!, forCellReuseIdentifier: TableViewCellIdentifiers.searchResultCell)
+        tableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.searchResultCell)
         cellNib = UINib(nibName: TableViewCellIdentifiers.nothingFoundCell, bundle: nil)
-        tableView.registerNib(cellNib!, forCellReuseIdentifier: TableViewCellIdentifiers.nothingFoundCell)
+        tableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.nothingFoundCell)
         cellNib = UINib(nibName: TableViewCellIdentifiers.loadingCell, bundle: nil)
-        tableView.registerNib(cellNib!, forCellReuseIdentifier: TableViewCellIdentifiers.loadingCell)
+        tableView.registerNib(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.loadingCell)
         
         tableView.rowHeight = 80
         searchBar.becomeFirstResponder()
@@ -43,6 +45,17 @@ class SearchViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func willTransitionToTraitCollection(newCollection: UITraitCollection, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        super.willTransitionToTraitCollection(newCollection, withTransitionCoordinator: coordinator)
+        
+        switch newCollection.verticalSizeClass {
+        case .Compact:
+            showLandscapeViewWithCoordinator(coordinator)
+        case .Regular, .Unspecified:
+            hideLandscapeViewWithCoordinator(coordinator)
+        }
     }
 
     struct TableViewCellIdentifiers {
@@ -215,7 +228,48 @@ class SearchViewController: UIViewController {
         return searchResult
     }
     
+    func showLandscapeViewWithCoordinator(coordinator: UIViewControllerTransitionCoordinator) {
+        precondition(landscapeViewController == nil)
+        
+        landscapeViewController = storyboard!.instantiateViewControllerWithIdentifier("LandscapeViewController") as? LandscapeViewController
+        
+        if let controller = landscapeViewController {
+            controller.view.frame = view.bounds
+            controller.view.alpha = 0
+            
+            view.addSubview(controller.view)
+            addChildViewController(controller)
+            
+            coordinator.animateAlongsideTransition( { _ in
+                controller.view.alpha = 1
+                self.searchBar.resignFirstResponder()
+                
+                if self.presentedViewController != nil {
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
+                
+                },
+                completion: {
+                _ in
+                    controller.didMoveToParentViewController(self)
+            })
+        }
+    }
+    
+    func hideLandscapeViewWithCoordinator(coordinator: UIViewControllerTransitionCoordinator) {
+        if let controller = landscapeViewController {
+            controller.willMoveToParentViewController(nil)
+            
+            coordinator.animateAlongsideTransition({ _ in controller.view.alpha = 0}, completion: {
+                _ in
+                
+                controller.view.removeFromSuperview()
+                controller.removeFromParentViewController()
+                self.landscapeViewController = nil
+            })
 
+        }
+    }
 }
 
 extension SearchViewController: UISearchBarDelegate {
