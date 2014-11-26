@@ -24,6 +24,7 @@
 		78A7A5541A17863900FF33DD /* SlideOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A7A5531A17863900FF33DD /* SlideOutAnimationController.swift */; };
 		78B5F6781A124211008BBC22 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5F6771A124211008BBC22 /* SearchResultCell.swift */; };
 		78B5F67A1A124467008BBC22 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78B5F6791A124467008BBC22 /* NothingFoundCell.xib */; };
+		F00496541A235FAE0040E125 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00496531A235FAE0040E125 /* Search.swift */; };
 		F0B8CC581A202D9E00D4B5A6 /* FadeOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B8CC571A202D9E00D4B5A6 /* FadeOutAnimationController.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		78A7A5531A17863900FF33DD /* SlideOutAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideOutAnimationController.swift; sourceTree = "<group>"; };
 		78B5F6771A124211008BBC22 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		78B5F6791A124467008BBC22 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		F00496531A235FAE0040E125 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		F0B8CC571A202D9E00D4B5A6 /* FadeOutAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeOutAnimationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 				78A7A5531A17863900FF33DD /* SlideOutAnimationController.swift */,
 				782D6FA31A18322300287000 /* LandscapeViewController.swift */,
 				F0B8CC571A202D9E00D4B5A6 /* FadeOutAnimationController.swift */,
+				F00496531A235FAE0040E125 /* Search.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F00496541A235FAE0040E125 /* Search.swift in Sources */,
 				785697971A0FB1DE007B80FB /* SearchViewController.swift in Sources */,
 				78A7A54E1A1717C900FF33DD /* DimmingPresentationController.swift in Sources */,
 				F0B8CC581A202D9E00D4B5A6 /* FadeOutAnimationController.swift in Sources */,
