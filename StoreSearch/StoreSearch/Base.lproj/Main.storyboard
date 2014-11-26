@@ -111,10 +111,7 @@
                     <connections>
                         <outlet property="pageControl" destination="7TV-2T-ntW" id="PIk-qy-CgA"/>
                         <outlet property="scrollView" destination="N9q-cS-u46" id="AFA-qR-2RO"/>
-<<<<<<< HEAD
                         <segue destination="R2c-22-1Lt" kind="presentation" identifier="ShowDetail" id="8RY-eL-eMV"/>
-=======
->>>>>>> FETCH_HEAD
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AjH-VQ-JHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
