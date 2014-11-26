@@ -13,11 +13,16 @@ class LandscapeViewController: UIViewController {
     @IBOutlet weak var pageControl: UIPageControl!
     
     var searchResults = [SearchResult]()
+<<<<<<< HEAD
     var search: Search!
     
     private var firstTime = true
     
     private var downloadTasks = [NSURLSessionDownloadTask]()
+=======
+    private var firstTime = true
+    
+>>>>>>> FETCH_HEAD
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +52,7 @@ class LandscapeViewController: UIViewController {
         
         if firstTime {
             firstTime = false
+<<<<<<< HEAD
             
             switch search.state {
             case .NotSearchedYet:
@@ -59,6 +65,9 @@ class LandscapeViewController: UIViewController {
             case .Results(let list):
                 tileButtons(list)
             }
+=======
+            tileButtons(searchResults)
+>>>>>>> FETCH_HEAD
         }
     }
 
@@ -109,6 +118,7 @@ class LandscapeViewController: UIViewController {
         var x = marginX
         
         for (index, searchResult) in enumerate(searchResults) {
+<<<<<<< HEAD
             let button = UIButton.buttonWithType(.Custom) as UIButton
             //button.backgroundColor = UIColor.whiteColor()
             button.setBackgroundImage(UIImage(named: "LandscapeButton"), forState: .Normal)
@@ -116,6 +126,11 @@ class LandscapeViewController: UIViewController {
             //button.setTitle("\(index)", forState: .Normal)
             button.tag = 2000 + index
             button.addTarget(self, action: Selector("buttonPressed:"), forControlEvents: .TouchUpInside)
+=======
+            let button = UIButton.buttonWithType(.System) as UIButton
+            button.backgroundColor = UIColor.whiteColor()
+            button.setTitle("\(index)", forState: .Normal)
+>>>>>>> FETCH_HEAD
             
             button.frame = CGRect(
                 x: x + paddingHorz,
@@ -154,6 +169,7 @@ class LandscapeViewController: UIViewController {
         }, completion: nil)
         
     }
+<<<<<<< HEAD
     
     func buttonPressed(sender: UIButton) {
         performSegueWithIdentifier("ShowDetail", sender: sender)
@@ -172,6 +188,8 @@ class LandscapeViewController: UIViewController {
             }
         }
     }
+=======
+>>>>>>> FETCH_HEAD
     /*
     // MARK: - Navigation
 
@@ -258,6 +276,15 @@ class LandscapeViewController: UIViewController {
         for task in downloadTasks {
             task.cancel()
         }
+    }
+}
+
+extension LandscapeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let width = scrollView.bounds.size.width
+        let currentPage = Int((scrollView.contentOffset.x + width/2) / width)
+        
+        pageControl.currentPage = currentPage
     }
 }
 
