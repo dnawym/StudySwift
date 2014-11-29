@@ -1,0 +1,36 @@
+
+/* Class = "IBUISegmentedControl"; 10q-Ul-K4Z.segmentTitles[0] = "All"; ObjectID = "10q-Ul-K4Z"; */
+"10q-Ul-K4Z.segmentTitles[0]" = "全部";
+
+/* Class = "IBUISegmentedControl"; 10q-Ul-K4Z.segmentTitles[1] = "Music"; ObjectID = "10q-Ul-K4Z"; */
+"10q-Ul-K4Z.segmentTitles[1]" = "音乐";
+
+/* Class = "IBUISegmentedControl"; 10q-Ul-K4Z.segmentTitles[2] = "Software"; ObjectID = "10q-Ul-K4Z"; */
+"10q-Ul-K4Z.segmentTitles[2]" = "软件";
+
+/* Class = "IBUISegmentedControl"; 10q-Ul-K4Z.segmentTitles[3] = "E-books"; ObjectID = "10q-Ul-K4Z"; */
+"10q-Ul-K4Z.segmentTitles[3]" = "电子书";
+
+/* Class = "IBUILabel"; text = "Type:"; ObjectID = "5iD-Kh-y2K"; */
+"5iD-Kh-y2K.text" = "Type:";
+
+/* Class = "IBUILabel"; text = "Genre Value"; ObjectID = "798-GY-d9D"; */
+"798-GY-d9D.text" = "Genre Value";
+
+/* Class = "IBUILabel"; text = "Artist Name"; ObjectID = "Bvl-g8-7oH"; */
+"Bvl-g8-7oH.text" = "Artist Name";
+
+/* Class = "IBUILabel"; text = "Kind Value"; ObjectID = "FdK-1k-4RO"; */
+"FdK-1k-4RO.text" = "Kind Value";
+
+/* Class = "IBUILabel"; text = "Name"; ObjectID = "G7d-Y9-amh"; */
+"G7d-Y9-amh.text" = "Name";
+
+/* Class = "IBUISearchBar"; placeholder = "App name, artist, song, album, e-book"; ObjectID = "UiL-X0-VIf"; */
+"UiL-X0-VIf.placeholder" = "应用程序, 艺术家, 歌曲, 相册, 电子书";
+
+/* Class = "IBUILabel"; text = "Genre:"; ObjectID = "c0p-75-Oak"; */
+"c0p-75-Oak.text" = "Genre:";
+
+/* Class = "IBUIButton"; normalTitle = "$9.99"; ObjectID = "fx6-Fz-T6A"; */
+"fx6-Fz-T6A.normalTitle" = "$9.99";

@@ -206,7 +206,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="artistNameLabel" destination="G7d-Y9-amh" id="9uW-lg-Sqj"/>
+                        <outlet property="artistNameLabel" destination="Bvl-g8-7oH" id="ym4-49-aSH"/>
                         <outlet property="artworkImageView" destination="uVC-J2-qiY" id="XD6-TV-2Hn"/>
                         <outlet property="genreLabel" destination="798-GY-d9D" id="i2V-We-opq"/>
                         <outlet property="kindLabel" destination="FdK-1k-4RO" id="iHa-3M-WPx"/>
