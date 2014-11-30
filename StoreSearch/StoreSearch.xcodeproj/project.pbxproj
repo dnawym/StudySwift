@@ -24,6 +24,7 @@
 		78B5F6781A124211008BBC22 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5F6771A124211008BBC22 /* SearchResultCell.swift */; };
 		F00496541A235FAE0040E125 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00496531A235FAE0040E125 /* Search.swift */; };
 		F034AA5E1A29EB3500CFD1E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F034AA601A29EB3500CFD1E5 /* InfoPlist.strings */; };
+		F06136331A2B125F00E33642 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06136321A2B125F00E33642 /* MenuViewController.swift */; };
 		F083E8911A274FA8001D9216 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F083E8931A274FA8001D9216 /* NothingFoundCell.xib */; };
 		F083E8951A2755AB001D9216 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F083E8971A2755AB001D9216 /* LoadingCell.xib */; };
 		F0B8CC581A202D9E00D4B5A6 /* FadeOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B8CC571A202D9E00D4B5A6 /* FadeOutAnimationController.swift */; };
@@ -64,6 +65,7 @@
 		F034AA5F1A29EB3500CFD1E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F034AA611A29EB3E00CFD1E5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		F039464D1A27636900CEE197 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		F06136321A2B125F00E33642 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		F083E8921A274FA8001D9216 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NothingFoundCell.xib; sourceTree = "<group>"; };
 		F083E8941A27514E001D9216 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/NothingFoundCell.xib"; sourceTree = "<group>"; };
 		F083E8961A2755AB001D9216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoadingCell.xib; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				782D6FA31A18322300287000 /* LandscapeViewController.swift */,
 				F0B8CC571A202D9E00D4B5A6 /* FadeOutAnimationController.swift */,
 				F00496531A235FAE0040E125 /* Search.swift */,
+				F06136321A2B125F00E33642 /* MenuViewController.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F00496541A235FAE0040E125 /* Search.swift in Sources */,
+				F06136331A2B125F00E33642 /* MenuViewController.swift in Sources */,
 				785697971A0FB1DE007B80FB /* SearchViewController.swift in Sources */,
 				78A7A54E1A1717C900FF33DD /* DimmingPresentationController.swift in Sources */,
 				F0B8CC581A202D9E00D4B5A6 /* FadeOutAnimationController.swift in Sources */,
@@ -437,6 +441,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -449,6 +454,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

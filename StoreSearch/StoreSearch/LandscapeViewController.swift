@@ -172,6 +172,7 @@ class LandscapeViewController: UIViewController {
                 let detailViewController = segue.destinationViewController as DetailViewController
                 let searchResult = list[sender!.tag - 2000]
                 
+                detailViewController.isPopUp = true
                 detailViewController.searchResult = searchResult
             default:
                 break
