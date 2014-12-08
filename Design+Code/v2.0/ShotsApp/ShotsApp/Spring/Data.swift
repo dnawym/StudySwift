@@ -26,7 +26,7 @@ func getData() -> Array<Dictionary<String,String>> {
             "text"  : "Hey,\n\nI'm working on app for tracking your trips.\n\nSee the attachments as always."
         ],
         [
-            "title": "Ford Model T - Comic",
+            "title": "Ford Model",
             "author": "Konstantin Datz",
             "image": "image3",
             "avatar": "avatar3",
