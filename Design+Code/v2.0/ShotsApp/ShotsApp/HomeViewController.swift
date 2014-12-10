@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeViewController: UIViewController {
 
@@ -24,8 +25,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var shareButton: UIButton!
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var favoritesLabel: UILabel!
     @IBOutlet weak var maskButton: UIButton!
     
@@ -41,6 +41,8 @@ class HomeViewController: UIViewController {
     var snapBehavior: UISnapBehavior!
     
     @IBOutlet var panRecognizer: UIPanGestureRecognizer!
+    
+    var managedObjectContext: NSManagedObjectContext!
     
     @IBAction func handleGesture(sender: AnyObject) {
         //println(sender)
@@ -190,7 +192,7 @@ class HomeViewController: UIViewController {
         springWithCompletion(0.5, {
             self.dialogView.frame = CGRectMake(0, 0, 414, 736)
             self.dialogView.layer.cornerRadius = 0
-            self.imageButton.frame = CGRectMake(0, -1, 414, 311)
+            self.imageButton.frame = CGRectMake(20, -51, 374, 268)
             self.likeButton.alpha = 0
             self.shareButton.alpha = 0
             self.userButton.alpha = 0
@@ -232,10 +234,9 @@ class HomeViewController: UIViewController {
             self.dialogView.transform = CGAffineTransformConcat(scale, translate)
         }
         
-        avatarImageView.image = UIImage(named: data[number]["avatar"]!)
         imageButton.setImage(UIImage(named: data[number]["image"]!), forState: UIControlState.Normal)
-        backgroundImageView.image = UIImage(named: data[number]["image"]!)
-        authorLabel.text = data[number]["author"]
+        backgroundImageView.image = UIImage(named: data[number]["background"]!)
+        subtitleLabel.text = data[number]["author"]
         titleLabel.text = data[number]["title"]
         
         dialogView.alpha = 1

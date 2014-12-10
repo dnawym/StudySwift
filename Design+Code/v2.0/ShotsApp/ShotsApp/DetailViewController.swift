@@ -11,8 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var backButton: UIButton!
     
@@ -23,8 +22,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        avatarImageView.image = UIImage(named: data[number]["avatar"]!)
-        authorLabel.text = data[number]["author"]
+        subtitleLabel.text = data[number]["author"]
         imageView.image = UIImage(named: data[number]["image"]!)
         textView.text = data[number]["text"]
         

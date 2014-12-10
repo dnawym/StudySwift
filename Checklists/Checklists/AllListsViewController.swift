@@ -49,7 +49,7 @@ class AllListsViewController: UITableViewController,
         
         // Configure the cell...
         let checklist = dataModel.lists[indexPath.row]
-        cell.textLabel!.text = checklist.name
+        cell.textLabel.text = checklist.name
         cell.accessoryType = .DetailDisclosureButton
         
         let count = checklist.countUncheckedItems()
@@ -61,7 +61,7 @@ class AllListsViewController: UITableViewController,
             cell.detailTextLabel!.text = "\(count) Remaining"
         }
         
-        cell.imageView?.image = UIImage(named: checklist.iconName)
+        cell.imageView.image = UIImage(named: checklist.iconName)
         
         return cell
     }
