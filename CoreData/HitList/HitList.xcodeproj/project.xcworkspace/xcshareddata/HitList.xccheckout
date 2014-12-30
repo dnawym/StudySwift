@@ -14,11 +14,11 @@
 		<string>https://github.com/dnawym/StudySwift.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>HitList/HitList.xcodeproj</string>
+	<string>CoreData/HitList/HitList.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7D1E4CD4AFCBEAE513433CF1CC916FDC6F33BDB0</key>
-		<string>../../..</string>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/dnawym/StudySwift.git</string>
