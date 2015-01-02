@@ -106,6 +106,21 @@ class FilterViewController: UITableViewController {
         return pr!
     }()
     
+    lazy var nameSortDescriptor: NSSortDescriptor = {
+        var sd = NSSortDescriptor(key: "name", ascending: true, selector: "localizedStandardCompare:")
+        return sd
+    }()
+    
+    lazy var distanceSortDescriptor: NSSortDescriptor = {
+        var sd = NSSortDescriptor(key: "location.distance", ascending: true)
+        return sd
+    }()
+    
+    lazy var priceSortDescriptor: NSSortDescriptor = {
+        var sd = NSSortDescriptor(key: "priceInfo.priceCategory", ascending: true)
+        return sd
+    }()
+    
     func populateExpensiveVenueCountLabel() {
         let fetchRequest = NSFetchRequest(entityName: "Venue")
         fetchRequest.predicate = expensiveVenuePredicate
@@ -170,6 +185,14 @@ class FilterViewController: UITableViewController {
             selectedPredicate = walkingDistancePredicate
         case userTipsCell:
             selectedPredicate = hasUserTipsPredicate
+        case nameAZSortCell:
+            selectedSortDescriptor = nameSortDescriptor
+        case nameZASortCell:
+            selectedSortDescriptor = nameSortDescriptor.reversedSortDescriptor as? NSSortDescriptor
+        case distanceSortCell:
+            selectedSortDescriptor = distanceSortDescriptor
+        case priceSortCell:
+            selectedSortDescriptor = priceSortDescriptor
         default:
             println("default case")
         }
@@ -188,7 +211,7 @@ class FilterViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         populateCheapVenueCountLabel()
         populateModerateVenueCountLabel()
         populateExpensiveVenueCountLabel()

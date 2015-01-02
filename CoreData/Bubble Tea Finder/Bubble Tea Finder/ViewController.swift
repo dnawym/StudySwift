@@ -15,13 +15,49 @@ class ViewController: UIViewController, FilterViewControllerDelegate {
     var coreDataStack: CoreDataStack!
     
     var fetchRequest: NSFetchRequest!
-    var venues: [Venue]!
+    var asyncFetchRequest: NSAsynchronousFetchRequest!
+    var venues: [Venue]! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        let batchUpdate = NSBatchUpdateRequest(entityName: "Venue")
+        batchUpdate.propertiesToUpdate = ["favorite" : NSNumber(bool: true)]
+        batchUpdate.affectedStores = coreDataStack.psc.persistentStores
+        batchUpdate.resultType = .UpdatedObjectsCountResultType
+        
+        var batchError: NSError?
+        let batchResult = coreDataStack.context.executeRequest(batchUpdate, error: &batchError) as NSBatchUpdateResult?
+        
+        if let result = batchResult {
+            println("Recored updated \(result.result)")
+        } else {
+            println("Could not update \(batchError), \(batchError!.userInfo)")
+        }
+        
         //fetchRequest = coreDataStack.model.fetchRequestTemplateForName("FetchRequest")
+        
+        // 可以将asyncFetchRequest看做是普通fetchRequest的一个warpper
         fetchRequest = NSFetchRequest(entityName: "Venue")
+        
+        // 异步请求由两部分组成：普通的request和completion handler
+        // 返回结果在finalResult中
+        asyncFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest, completionBlock: {
+            [unowned self] (result: NSAsynchronousFetchResult!) -> Void in
+            self.venues = result.finalResult as [Venue]
+            self.tableView.reloadData()
+        })
+        
+        // 执行异步请求调用executeRequest而不是executeFetchRequest
+        var error: NSError?
+        let results = coreDataStack.context.executeRequest(asyncFetchRequest, error: &error)
+        
+        // executeRequest会立即返回，这里我们在异步请求的completion handler中处理返回结果并更新table view
+        if let persistentStoreResults = results {
+            // return immediately, cancel here if you want
+        } else {
+            println("Could not fetch \(error), \(error!.userInfo)")
+        }
         
         fetchAndReload()
     }

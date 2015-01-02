@@ -25,7 +25,8 @@ class CoreDataStack {
     
     psc = NSPersistentStoreCoordinator(managedObjectModel:model)
     
-    context = NSManagedObjectContext()
+    // 异步fetch不支持默认的concurrencyType，这里修改为.MainQueueConcurrencyType
+    context = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
     context.persistentStoreCoordinator = psc
     
     let documentsURL = applicationDocumentsDirectory()
