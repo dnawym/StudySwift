@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
         let dogEntity = NSEntityDescription.entityForName("Dog", inManagedObjectContext: managedContext)
-        let dog = Dog(entity: dogEntity!, insertIntoManagedObjectContext: managedContext)
+        //let dog = Dog(entity: dogEntity!, insertIntoManagedObjectContext: managedContext)
         
         let dogName = "Fido"
         let dogFetch = NSFetchRequest(entityName: "Dog")
