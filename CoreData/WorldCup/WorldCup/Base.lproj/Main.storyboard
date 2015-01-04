@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="T8E-Fo-wmV">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--World Cup!-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="WorldCup" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bUn-YF-qA8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="teamCellReuseIdentifier" id="Oc7-iq-sbR" customClass="TeamCell" customModule="WorldCup" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oc7-iq-sbR" id="5r0-rx-f05">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qM1-Js-mdm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="117" height="79"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="117" id="jV7-XQ-Nse"/>
+                                                    </constraints>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="1" width="117" height="79"/>
+                                                    </variation>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gO2-Yr-76G">
+                                                    <rect key="frame" x="125" y="13" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="125" y="13" width="146" height="21"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAO-qh-0BW">
+                                                    <rect key="frame" x="125" y="45" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="125" y="41" width="116" height="21"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XAO-qh-0BW" firstAttribute="leading" secondItem="gO2-Yr-76G" secondAttribute="leading" id="BWh-pm-qwm"/>
+                                                <constraint firstItem="qM1-Js-mdm" firstAttribute="top" secondItem="5r0-rx-f05" secondAttribute="top" id="S2Y-Um-x97"/>
+                                                <constraint firstItem="XAO-qh-0BW" firstAttribute="bottom" secondItem="5r0-rx-f05" secondAttribute="bottomMargin" constant="-5" id="VgF-2v-f5A"/>
+                                                <constraint firstItem="gO2-Yr-76G" firstAttribute="leading" secondItem="qM1-Js-mdm" secondAttribute="trailing" constant="8" symbolic="YES" id="fQa-xe-63t"/>
+                                                <constraint firstItem="qM1-Js-mdm" firstAttribute="leading" secondItem="5r0-rx-f05" secondAttribute="leading" id="lBw-fP-l3b"/>
+                                                <constraint firstItem="gO2-Yr-76G" firstAttribute="top" secondItem="5r0-rx-f05" secondAttribute="topMargin" constant="5" id="mJN-a7-mUJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="qM1-Js-mdm" secondAttribute="bottom" id="xdx-F9-IHy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="flagImageView" destination="qM1-Js-mdm" id="UwE-WT-0Vd"/>
+                                            <outlet property="scoreLabel" destination="XAO-qh-0BW" id="l0q-Gk-d2Z"/>
+                                            <outlet property="teamLabel" destination="gO2-Yr-76G" id="fug-hX-h5Q"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="nXp-vn-kbh"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="DJu-i3-BNx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bUn-YF-qA8" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Ta3-ZJ-M3J"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="bUn-YF-qA8" secondAttribute="bottom" id="hEU-g4-3y4"/>
+                            <constraint firstAttribute="trailing" secondItem="bUn-YF-qA8" secondAttribute="trailing" id="wmk-Ox-RHS"/>
+                            <constraint firstItem="bUn-YF-qA8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="zBO-bp-66P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="World Cup!" id="b8U-XD-dDK">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="bxG-aO-InQ">
+                            <connections>
+                                <action selector="addTeam:" destination="vXZ-lx-hvc" id="Ncb-o6-Gal"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="bxG-aO-InQ" id="dlR-fw-Rhm"/>
+                        <outlet property="tableView" destination="bUn-YF-qA8" id="E2P-H3-go1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1270.5" y="465.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I5f-C4-Lj2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T8E-Fo-wmV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dWh-Xn-uAe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="yd5-Ph-qiT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ppx-AP-BK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="375" y="469.5"/>
+        </scene>
+    </scenes>
+</document>
