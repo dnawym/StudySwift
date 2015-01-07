@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6220.14" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Camper" representedClassName="CampgroundManager.Camper" syncable="YES">
+        <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="reservations" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Reservation" inverseName="camper" inverseEntity="Reservation" syncable="YES"/>
+    </entity>
+    <entity name="CampSite" representedClassName="CampgroundManager.CampSite" syncable="YES">
+        <attribute name="electricity" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="siteNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="water" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="reservations" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Reservation" inverseName="campSite" inverseEntity="Reservation" syncable="YES"/>
+    </entity>
+    <entity name="Reservation" representedClassName="CampgroundManager.Reservation" syncable="YES">
+        <attribute name="dateFrom" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dateTo" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="status" attributeType="String" syncable="YES"/>
+        <relationship name="camper" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Camper" inverseName="reservations" inverseEntity="Camper" syncable="YES"/>
+        <relationship name="campSite" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CampSite" inverseName="reservations" inverseEntity="CampSite" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Camper" positionX="261" positionY="198" width="128" height="90"/>
+        <element name="CampSite" positionX="270" positionY="207" width="128" height="105"/>
+        <element name="Reservation" positionX="297" positionY="225" width="128" height="120"/>
+    </elements>
+</model>
